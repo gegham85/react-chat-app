@@ -6,7 +6,6 @@ class MessageList extends React.Component {
     return (
       <div className="message__list">
         {this.props.messages.map((message, index) => {
-          console.log(message.parts);
 
           return (
             <Message

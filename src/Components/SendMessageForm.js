@@ -20,6 +20,10 @@ class SendMessageForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
+    if (!this.state.message) {
+      return;
+    }
+
     this.setState({ message: '' });
 
     this.props.addNewMessage(this.state.message);
@@ -35,7 +39,7 @@ class SendMessageForm extends React.Component {
           onChange={this.handleChange}
         />
 
-        <button>Submit</button>
+        <button>New Message</button>
       </form>
     )
   }

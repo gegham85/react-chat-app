@@ -100,9 +100,6 @@ class App extends React.Component {
   createNewRoom(room) {
     const roomName = room.charAt(0).toUpperCase() + room.slice(1);
     const roomId = room.toLowerCase();
-    // this.setState(prevState => ({
-    //   joinableRooms: [...prevState.joinableRooms, roomName]
-    // }));
 
     this.currentUser.createRoom({
       id: roomId,

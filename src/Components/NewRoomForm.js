@@ -13,6 +13,10 @@ class NewRoomForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
+    if (!this.state.roomName) {
+      return;
+    }
+
     this.setState({ roomName: '' });
 
     this.props.createNewRoom(this.state.roomName)
@@ -32,7 +36,7 @@ class NewRoomForm extends React.Component {
           name="newroom"
           onChange={this.handleChange}
         />
-        <button>Submit</button>
+        <button>New Room</button>
       </form>
     )
   }
